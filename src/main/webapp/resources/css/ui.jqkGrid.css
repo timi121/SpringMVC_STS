@@ -1,0 +1,43 @@
+/*Grid*/
+.jqkg {position:relative;font-size:11px;}
+/*타이틀바*/
+.jqkg .jqkg-titlebar{position:relative;height:18px;
+	padding: .3em .2em .2em .3em; border-left: 0px none;border-right: 0px none; border-top: 0px none}
+.jqkg .jqkg-titlebar .jqkg-title { float: left; margin: .1em 0 .2em; }
+	
+/*내용*/
+.jqkg .jqkg-content{position:relative}
+/*테이블영역*/
+.jqkg .jqkg-content .jqkg-table{position:relative; float:left}
+.jqkg .jqkg-content .jqkg-table table{position:relative;border : 0px none;table-layout:fixed; }
+.jqkg .jqkg-content .jqkg-table table td{height:20px;border-top:0px;border-left:0px;}
+/*각테이블들이 위치할 레이어들*/
+.jqkg .jqkg-content .jqkg-table .jqkg-table-hl{position:absolute;left:0px;top:0px;}
+.jqkg .jqkg-content .jqkg-table .jqkg-table-hl table td{text-align:center;}
+.jqkg .jqkg-content .jqkg-table .jqkg-table-hr{position:absolute;right:0px;top:0px;overflow:hidden;}
+.jqkg .jqkg-content .jqkg-table .jqkg-table-hr table td{text-align:center;}
+.jqkg .jqkg-content .jqkg-table .jqkg-table-bl{position:absolute;left:0px;top:21px;;overflow:hidden;} /*21은 임시..*/
+.jqkg .jqkg-content .jqkg-table .jqkg-table-br{position:absolute;right:0px;top:21px;;overflow:hidden;}
+.jqkg .jqkg-content .jqkg-table .jqkg-table-fl{position:absolute;}
+.jqkg .jqkg-content .jqkg-table .jqkg-table-fr{position:absolute;}
+/* 스크롤기능 관련 */
+.jqkg .jqkg-content .jqkg-vscroll{position:relative; float:left;width:18px}
+.jqkg .jqkg-content .jqkg-vscroll .jqkg-vscroll-in{position:relative; overflow-y:scroll;}
+.jqkg .jqkg-content .jqkg-vscroll .jqkg-vscroll-inin{position:relative;width:1px}
+.jqkg .jqkg-content .jqkg-hscroll{position:relative; float:left;height:18px}
+.jqkg .jqkg-content .jqkg-hscroll .jqkg-hscroll-in{position:relative; overflow-x:scroll;}
+.jqkg .jqkg-content .jqkg-hscroll .jqkg-hscroll-inin{position:relative;height:1px}
+
+/*페이저*/
+.jqkg .jqkg-pager{position:relative;height:22px;border-left : 0px none;border-right : 0px none;border-bottom : 0px none;}
+
+/*기타*/
+/*말줄임표 (table의 td안의 div로 사용됨..)*/
+.jqkg-ellipsis{
+	white-space:nowrap;
+	text-overflow:ellipsis;		/* IE, Safari */
+	-o-text-overflow:ellipsis;		/* Opera under 10.7 */
+	overflow:hidden;			/* "overflow" value must be different from "visible" */ 
+	-moz-binding: url('ellipsis.xml#ellipsis');
+}
+/*.jqkg-iconf{}프로그래밍 요소로만 존재함*/

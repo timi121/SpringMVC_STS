@@ -1,0 +1,23 @@
+create table T_ACCOUNT (
+    USER_ID int not null,
+    INV_DATE varchar(80) NOT null,
+    NAME varchar(80) not null,
+    AMOUNT varchar(80) null,
+    TAX varchar(80) null,
+    TOTAL varchar(80) null,
+    NOTE varchar(80) null,
+    constraint pk_ID primary key (USER_ID)
+);
+
+INSERT INTO T_ACCOUNT (USER_ID, INV_DATE, NAME, AMOUNT, TAX, TOTAL, NOTE)
+	   VALUES(1, 2012, 'TEST', '2000', '100', '1212', 'test');
+	   
+INSERT INTO T_ACCOUNT (USER_ID, INV_DATE, NAME, AMOUNT, TAX, TOTAL, NOTE)
+	   VALUES(2, 2012, 'TEST', '5000', '100', '1212', 'tdfdf');
+	   
+INSERT INTO T_ACCOUNT (USER_ID, INV_DATE, NAME, AMOUNT, TAX, TOTAL, NOTE)
+	   VALUES(3, 2012, 'T33', '5000', '100', '1212', 'test321');
+	   
+INSERT INTO T_ACCOUNT (USER_ID, INV_DATE, NAME, AMOUNT, TAX, TOTAL, NOTE)
+	   VALUES(12, 2012, 'T33', '7000', '100', '123456', 'test23');	   
+	   

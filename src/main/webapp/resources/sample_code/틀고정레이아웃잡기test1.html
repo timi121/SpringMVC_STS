@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+ </head>
+
+ <body>
+
+
+<div style="width:200px;height:200px;background-color:#e1e1e1">
+<div style="float:left;width:100px;height:100px;background-color:#ffccff"></div>
+<div style="float:left;width:100px;height:100px;background-color:#ffff99"></div>
+<div style="float:left;width:100px;height:100px;background-color:#66ff00"></div>
+<div style="float:left;width:100px;height:100px;background-color:#00ccff"></div>
+</div>
+
+<div style="width:200px;height:200px;background-color:#e1e1e1;position:relative" id="d0"> 
+<div style="position:absolute;top:0;left:0;background-color:#ffccff" id="d1">가가가<br/>가가가<br/>가가가</div> 
+<div style="position:absolute;right:0;top:0;background-color:#ffff99" id="d2">나</div> 
+<div style="position:absolute;left:0;bottom:0;background-color:#66ff00" id="d3">다</div> 
+<div style="position:absolute;right:0;bottom:0;background-color:#00ccff" id="d4">라</div> 
+</div> 
+
+<div style="width:200px;height:200px;background-color:#e1e1e1;position:relative"> 
+<div style="position:absolute;width:10%;height:10%;top:0;left:0;background-color:#ffccff">가</div> 
+<div style="position:absolute;width:90%;height:10%;right:0;top:0;background-color:#ffff99">나</div> 
+<div style="position:absolute;width:10%;height:90%;left:0;bottom:0;background-color:#66ff00">다</div> 
+<div style="position:absolute;width:90%;height:90%;right:0;bottom:0;background-color:#00ccff">라</div> 
+</div> 
+
+<div style="width:200px;height:200px;background-color:#e1e1e1;position:relative"> 
+<div style="float:left; background-color:#ffccff">가eee<br>efe</div> 
+<div style="background-color:#ffff99">나</div> 
+<!--
+<div style="float:left; height:100%; background-color:#66ff00">다</div> 
+<div style="height:100%; background-color:#00ccff">라</div> 
+-->
+</div> 
+
+<script type="text/javascript">
+<!--
+	var d0 = document.getElementById("d0");
+	var d1 = document.getElementById("d1");
+	var d2 = document.getElementById("d2");
+	var d3 = document.getElementById("d3");
+	var d4 = document.getElementById("d4");
+	d2.style.width  = d0.offsetWidth - d1.offsetWidth;
+	d2.style.height = d1.offsetHeight;
+	d3.style.width = d1.offsetWidth;
+	d3.style.height = d0.offsetHeight - d1.offsetHeight;
+	d4.style.width = d2.offsetWidth;
+	d4.style.height = d3.offsetHeight;
+	
+//-->
+</script>
+
+
+
+ </body>
+</html>

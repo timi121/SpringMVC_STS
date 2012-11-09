@@ -1,0 +1,20 @@
+			<div class='jqkg-content' style='height:200px'>
+				<div class='jqkg-table' style='width:652px;height:182px;position:relative''>
+					<div class='jqkg-table-hl'></div>
+					<div class='jqkg-table-hr'></div>
+ 					<div class='jqkg-table-bl'></div>
+					<div class='jqkg-table-br'></div> 
+					<div class='jqkg-table-fl'></div>
+					<div class='jqkg-table-fr'></div>
+				</div>
+				<div class='jqkg-vscroll' style='height:182px'>
+					<div class='jqkg-vscroll-in' style='height:182px'>
+						<div class='jqkg-vscroll-inin' style='height:500px;'></div>
+					</div>
+				</div>
+				<div class='jqkg-hscroll' style='width:100%'>
+					<div class='jqkg-hscroll-in' style='height:18px;width:100%'>
+						<div class='jqkg-hscroll-inin' style='width:800px;'></div>
+					</div>
+				</div>
+			</div>

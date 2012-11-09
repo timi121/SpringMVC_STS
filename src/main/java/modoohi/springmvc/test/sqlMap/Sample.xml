@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 
+	문자열 합칠때 
+		오라클 	|| 
+		mysql 	concat()
+		mssql 	+ 
+-->
+<mapper namespace="modoohi.springmvc.test.sqlMap.Sample">
+	<cache />
+
+	<select id="getAccountList" parameterType="string" resultType="hashmap">
+	  SELECT
+			*
+	    FROM T_ACCOUNT
+	   WHERE 1=1
+	   		 <if test="user_id != null and user_id != ''">
+	   		 	AND USER_ID LIKE concat('%',#{user_id},'%')
+	   		 </if>
+	   		 <if test="inv_date != null and inv_date != ''">
+	   		 	AND INV_DATE LIKE concat('%',#{inv_date},'%')
+	   		 </if>
+	   		 <if test="name != null and name != ''">
+	   		 	AND NAME LIKE concat('%',#{name},'%')
+	   		 </if>
+	   		 <if test="amount != null and amount != ''">
+	   		 	AND AMOUNT LIKE concat('%',#{amount},'%')
+	   		 </if>
+	   		 <if test="tax != null and tax != ''">
+	   		 	AND TAX LIKE concat('%',#{tax},'%')
+	   		 </if>
+	   		 <if test="total != null and total != ''">
+	   		 	AND TOTAL LIKE concat('%',#{total},'%')
+	   		 </if>
+	   		 <if test="note != null and note != ''">
+	   		 	AND NOTE LIKE concat('%',#{note},'%')
+	   		 </if>
+	</select>
+
+	<insert id="insertAccount" parameterType="hashmap">
+		INSERT INTO
+				T_ACCOUNT
+				(
+					USER_ID
+					, INV_DATE
+					, NAME
+					, AMOUNT
+					, TAX
+					, TOTAL
+					, NOTE
+					)
+			VALUES
+				(
+					#{user_id}
+					, #{inv_date}
+					, #{name}
+					, #{amount}
+					, #{tax}
+					, #{total}
+					, #{note}
+				)
+	  </insert>
+	  
+	  <update id="updateAccount" parameterType="hashmap">
+		UPDATE 
+				T_ACCOUNT 
+		   SET
+			(
+				INV_DATE = #{inv_date}
+				, NAME = #{name}
+				, AMOUNT = #{amount}
+				, TAX = #{tax}
+				, TOTAL = #{total}
+				, NOTE = #{note}
+			)
+		WHERE
+				USER_ID = #{user_id}
+	  			
+	  </update>
+</mapper>
