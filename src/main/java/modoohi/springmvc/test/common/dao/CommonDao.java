@@ -13,19 +13,30 @@ import org.springframework.stereotype.Repository;
 public class CommonDao extends SqlSessionDaoSupport {
 
 	@Resource(name="sqlSession")
-	protected void initDao(SqlSessionTemplate sqlSessionTemplate) {
-		this.setSqlSessionTemplate(sqlSessionTemplate);
+	public void initDao(SqlSessionTemplate sqlSessionTemplate) {
+		super.setSqlSessionTemplate(sqlSessionTemplate);
 	}
 	
+	/**
+	 * 갯수 반환
+	 * @param sqlId
+	 * @param obj
+	 * @return
+	 * @throws Exception
+	 */
+	@SuppressWarnings("unchecked")
+	public int getCount(String sqlId, Object obj) throws Exception{
+		return getSqlSession().selectOne(sqlId, obj);  
+	}
+
 	/**
 	 * 조회
 	 * @param sqlId SQL ID
 	 * @param obj	조건 값
 	 * @return
 	 */
-	public List<HashMap<String, Object>> select(String sqlId, Object obj) {
-		List<HashMap<String, Object>> list = getSqlSession().selectList(sqlId, obj);		
-		return list;		
+	public List<HashMap<String, Object>> select(String sqlId, Object obj) throws Exception{
+		return getSqlSession().selectList(sqlId, obj);		
 	}
 	
 	
@@ -35,10 +46,8 @@ public class CommonDao extends SqlSessionDaoSupport {
 	 * @param obj
 	 * @return
 	 */
-	public int insert(String sqlId, Object obj) {
-		int result = 0;
-		result = getSqlSession().insert(sqlId, obj); 
-		return result;
+	public int insert(String sqlId, Object obj) throws Exception{
+		return getSqlSession().insert(sqlId, obj);
 	}
 	
 	/**
@@ -47,9 +56,7 @@ public class CommonDao extends SqlSessionDaoSupport {
 	 * @param obj
 	 * @return
 	 */
-	public int update(String sqlId, Object obj) {
-		int result = 0;
-		result = getSqlSession().update(sqlId, obj);		
-		return result;
+	public int update(String sqlId, Object obj) throws Exception{
+		return getSqlSession().update(sqlId, obj);
 	}
 }
