@@ -1,0 +1,47 @@
+
+this : 단위 그리드의 DOM객체-기본컨테이너
+	ts : this
+	p : 설정벨류들..
+	grid : 그리드관련 정보 확장객체
+		headers : 헤더칼럼 array
+		cols : 기본칼럼 array
+		footers : 푸터칼럼 array
+		dragStart : 칼럼 사이즈 변경시 드래그 시작인듯
+		dragMove : 칼럼사이즈 변경시 드래그 중
+		dragEnd : 칼럼사이즈변경시 드래그종료
+		//populateVisible : dynamic페이징 관련된 부분인거 같은데...
+		scrollGrid : 그리드 스크롤 될 때 호출되는 이벤트
+		selectionPreserver : 선택영역을 저장시킴?? 그리드에서 뭔가 이벤트가 발생한 후에 선택영역을 재설정하기 위한 메소드인듯
+		
+		cDiv : 캡션영역 div
+		bDiv : 데이터 div영역인가??
+		hDiv : 헤더영역 div
+		sDiv : 푸터영역 div?
+		
+		
+		
+		
+		
+		
+		
+		
+* event.stopPropagation() 이 왜 필요한가?
+
+   - 상위 엘리먼트의 동일한 이벤트가 호출되는 것을 막기 위하여
+
+   - 만약 TR에 onclick이벤트가 걸려 있고, TABLE에도 걸려있을 경우,
+     TR을 클릭하면 TR이벤트 => TABLE이벤트 순으로 이벤트핸들러가 호출되는데.
+     이 경우 TABLE이벤트가 trigger되지 않도록 하는 것이 stopPropagation() 이다.
+
+
+
+* 참고 
+
+   - 모질라 사이트에 있는 예제를 참고하면 이해가 쉬울 것이다.
+      stopPropagation()이 있는 부분을 주석처리 비교하면서 'one' 이 있는 TR을 클릭해 보자
+
+   - jQuery의 .live() 함수 등에서 stopPropagation()이 동작하지 않는 문제 - 댓글 참고
+
+
+
+		

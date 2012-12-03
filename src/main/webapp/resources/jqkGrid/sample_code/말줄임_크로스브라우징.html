@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+ </head>
+ <style type="text/css">
+ .ellipsis{
+	white-space:nowrap;
+	text-overflow:ellipsis;		/* IE, Safari */
+	-o-text-overflow:ellipsis;		/* Opera under 10.7 */
+	overflow:hidden;			/* "overflow" value must be different from "visible" */ 
+	-moz-binding: url('ellipsis.xml#ellipsis');
+}
+
+#ul li {
+	white-space:nowrap;
+	text-overflow:ellipsis;		/* IE, Safari */
+	-o-text-overflow: ellipsis;	/* Opera under 10.7 */
+	overflow:hidden;			/* "overflow" value must be different from "visible" */ 
+	-moz-binding: url('ellipsis.xml#ellipsis');
+	width:100%;
+}
+
+ </style>
+ <body>
+  <ul id="ul" style="width:50%; border:solid 1px black; list-style-image:none; list-style-type:none; padding:0; margin:0;">
+	<li>
+		<a style="cursor:hand; cursor:pointer;" onclick="alert('li_1 click');">
+			li_1 (변경 후)나는 자랑스러운 태극기 앞에 자유롭고 정의로운 대한민국의 무궁한 발전을 위해 충성을 다할 것을 굳게 다짐합니다.(변경 후)나는 자랑스러운 태극기 앞에 자유롭고 정의로운 대한민국의 무궁한 발전을 위해 충성을 다할 것을 굳게 다짐합니다.</a></li>
+	<li>
+		li_2
+		<ul>
+			<li>li_child___li_child___li_child___li_child___li_child___li_child___li_child___li_child___li_child___li_child___</li>
+		</ul>
+	</li>
+</ul>
+<table width="50%" border="1" style="table-layout:fixed;" cellspacing="1" cellpadding="1">
+	<tr>
+		<td style="width:30px">
+			<div class="ellipsis" style="width:100%;">
+				(변경 후)나는 자랑스러운 태극기 앞에 자유롭고 정의로운 대한민국의 무궁한 발전을 위해 충성을 다할 것을 굳게 다짐합니다.(변경 후)나는 자랑스러운 태극기 앞에 자유롭고 정의로운 대한민국의 무궁한 발전을 위해 충성을 다할 것을 굳게 다짐합니다.</div></td>
+		<td style="width:30px; text-align:center;">1</td>
+		<td style="width:30px; text-align:center;">2</td>
+	</tr>
+</table>
+
+
+
+
+ </body>
+</html>

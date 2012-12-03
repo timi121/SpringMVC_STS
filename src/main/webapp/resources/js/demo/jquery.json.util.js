@@ -4,7 +4,7 @@
  */
 
 /**
- * form 데이터를 json으로 변환 할대 사용
+ * form 데이터를 json으로 변환 할때 사용
  */
 $.fn.serializeObject = function() {
 	var o = {};
@@ -26,6 +26,7 @@ $.fn.serializeObject = function() {
  * JSON 데이터를 POST 방식으로 전달 할때 사용
  */
 $.postJSON = function(url, data, callback) {
+	alert($.toJSON(data));
     return jQuery.ajax({
         'type': 'POST',
         'url': url,

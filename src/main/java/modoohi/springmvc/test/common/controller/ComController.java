@@ -2,7 +2,7 @@ package modoohi.springmvc.test.common.controller;
 
 import javax.annotation.Resource;
 
-import modoohi.springmvc.test.common.dao.CommonDao;
+import modoohi.springmvc.test.common.dao.*;
 
 import org.springframework.stereotype.Controller;
 
